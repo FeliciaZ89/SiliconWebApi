@@ -7,12 +7,14 @@ namespace WebApi.Controllers;
 [ApiController]
 public class SubscribeController : ControllerBase
 {
-    public async Task<IActionResult> Subscribe()
+    [HttpGet]
+    public async Task<IActionResult> Subscribe(string email)
     {
         return Ok();
     }
 
-    public async Task<IActionResult> Unsubscribe()
+    [HttpDelete]
+    public async Task<IActionResult> Unsubscribe(string email)
     {
         return Ok();
     }
